@@ -23,7 +23,7 @@ module.exports = {
     body: {
       password_old: joi.string().required().label('Old password'),
       password_new: joiPassword.string().minOfSpecialCharacters(1).minOfLowercase(1).minOfUppercase(1).minOfNumeric(1).noWhiteSpaces().onlyLatinCharacters().min(6).max(32).required().label('New password'),
-      password_confirm: joi.string().required().label('Password confirmation'),
+      password_confirm: joi.string().required().label('Password confirm'),
     },
   },
 
